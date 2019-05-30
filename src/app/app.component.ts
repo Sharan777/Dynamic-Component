@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PopupService } from './popup/popup.service';
 
 @Component({
   selector: 'my-app',
@@ -6,9 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Angular';
+  name = 'Angular Dynamic Component';
+
+  constructor(public popUpSVC:PopupService){
+
+  }
 
   ngOnInit(){
     console.log('app');
+  }
+  openPopUp(){
+    this.popUpSVC.createDynamicPopUp()
   }
 }
