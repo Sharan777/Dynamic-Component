@@ -6,9 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./developer.component.css']
 })
 export class DeveloperComponent implements OnInit {
-
-  constructor() { }
-
+  count:number = 1;
+  constructor() {
+    setInterval(()=>{
+      this.count++;
+    }, 1000)
+   }
+   
   ngOnInit() {
   }
 
