@@ -28,6 +28,7 @@ popupService:any;
   }
 
   close() {
+    this.popupService.deleteDynamicPopUp(th_id);
 
   }
 
