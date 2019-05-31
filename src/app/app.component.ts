@@ -9,13 +9,9 @@ import { PopupService } from './popup/popup.service';
 export class AppComponent  {
   name = 'Angular Dynamic Component';
 
-  constructor(public popUpSVC:PopupService){
-
-  }
-
-  ngOnInit() {
-   
-  }
+  constructor(public popUpSVC:PopupService){ }
+  ngOnInit() { }
+  
   openPopUp() {
    this.popUpSVC.createDynamicPopUp();
   }
