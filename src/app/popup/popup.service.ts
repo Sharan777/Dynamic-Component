@@ -13,6 +13,6 @@ export class PopupService {
     this.appRef.attachView(compRef.hostView);
     const ele = (compRef.hostView as EmbeddedViewRef<any>).rootNodes[0] as HTMLElement;
     document.body.appendChild(ele);
-  }
+  } 
 
 }
