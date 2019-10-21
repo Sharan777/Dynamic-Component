@@ -1,9 +1,13 @@
 import { Injectable, ComponentFactoryResolver, ApplicationRef, Injector, EmbeddedViewRef
  } from '@angular/core';
+ import {Subject, observable} from 'rxjs'
  import { PopupComponent } from './popup.component'
 
 @Injectable()
 export class PopupService {
+
+  private popupSubject: Subject<any> = new Subject<any>();
+  public popupObservable$ = this.popupSubject.asObservable();
 
   counter:number=1;
   dialogs={}
