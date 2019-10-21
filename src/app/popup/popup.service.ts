@@ -7,12 +7,14 @@ import { Injectable, ComponentFactoryResolver, ApplicationRef, Injector, Embedde
 export class PopupService {
 
   private popupSubject: Subject<any> = new Subject<any>();
-  public popupObservable$ = this.popupSubject.asObservable();
+  public popupObservable$: Observable<a>;
 
   counter:number=1;
   dialogs={}
   constructor(public compFactRes:ComponentFactoryResolver,
-   public appRef:ApplicationRef, public injector:Injector ) { }
+   public appRef:ApplicationRef, public injector:Injector ) {
+     this.popupObservable$ = this.popupSubject.asObservable();
+    }
 
   createDynamicPopUp(comp, config){
     const compRef = this.compFactRes.resolveComponentFactory(PopupComponent).create(this.injector);

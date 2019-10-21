@@ -5,6 +5,6 @@ import { Directive, ViewContainerRef } from '@angular/core';
 })
 export class PopupDirective {
 
-  constructor(private viewContainerRef:ViewContainerRef) { }
+  constructor(public viewContainerRef:ViewContainerRef) { }
 
 }
